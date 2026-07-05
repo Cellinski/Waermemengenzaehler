@@ -46,9 +46,17 @@ mqtt:
 
 external_components:
   - source:
-      type: local
-      path: components
-    components: [mbus]
+      type: git
+      url: https://github.com/Cellinski/Waermemengenzaehler
+      ref: main
+    components:
+      - mbus
+      refresh: 0s
+#external_components:
+#  - source:
+#      type: local
+#      path: components
+#    components: [mbus]
     
 uart:
   - tx_pin: GPIO4
